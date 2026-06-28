@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #000305;
+    --background-color: #f8f9fa;
+    --text-color: #02060a;
+    --light-gray: #e9ecef;
+    --white: #ffffff;
+    --dark-blue: #0056b3;
+    --highlight-color: #FFD700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-image: url('img/background-hexagon-tech-dark.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #1a1a1a;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: var(--white);
+    padding: 20px 0 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 10px 0 5px;
+    font-size: 3.5em;
+    color: var(--highlight-color);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    font-family: 'Roboto', sans-serif;
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: 700;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.9);
+    margin: 10px auto;
+    max-width: 850px;
+}
+
+nav {
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.section-container h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    position: relative;
+}
+
+.section-container h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: rgba(233, 236, 239, 0.95);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: var(--dark-blue);
+}
+
+aside {
+    background-color: rgba(255, 255, 255, 0.92);
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+aside h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links li a {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.social-links li a:hover {
+    color: var(--dark-blue);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: rgba(52, 58, 64, 0.9);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .section-container {
+        padding: 20px;
+    }
+
+    .section-container h2 {
+        font-size: 1.8em;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    aside {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .tagline {
+        font-size: 0.9em;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    .section-container h2 {
+        font-size: 1.6em;
+    }
+
+    .skill-item {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .project-card h3 {
+        font-size: 1.3em;
+    }
+
+    .project-card p {
+        font-size: 0.85em;
+    }
+
+    aside h3 {
+        font-size: 1.5em;
+    }
+}
