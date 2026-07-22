@@ -4,47 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Juliana Rainen</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="hero">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a class="brand" href="#top">JR</a>
 
-    <header>
-        <div class="header-content">
-            <img src="img/profile-juliana-rainen.jpg" alt="Foto de Juliana Rainen" class="profile-pic">
-
-            <h1>Juliana Rainen Gomes Máximo</h1>
-
-            <p class="tagline">
-                Software Developer | ADS Student ⚙️
-            </p>
-            
-            <p class="tagline">
-                Aprender, adaptar e construir: a tecnologia está sempre em evolução.
-            </p>
-            
-        </div>
-
-        <nav>
             <ul>
-                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#about">Sobre</a></li>
                 <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#soft-skills">Soft Skills</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </nav>
+
+        <div class="hero-content" id="top">
+            <div class="hero-text">
+                <span class="eyebrow">Desenvolvimento web • Automação • IA aplicada</span>
+
+                <h1>Juliana Rainen Gomes Máximo</h1>
+
+                <p class="tagline">
+                    Desenvolvedora em formação, com visão analítica e foco em construir experiências digitais claras, modernas e úteis para pessoas e negócios.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                        Ver projetos
+                    </a>
+
+                    <a class="button button-secondary" href="https://wa.me/message/RVOKAT3BBCFEI1" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Resumo profissional">
+                <img src="img/profile-juliana-rainen.jpg" alt="Foto de Juliana Rainen" class="profile-pic">
+
+                <div>
+                    <strong>Full Stack em evolução</strong>
+                    <span>ADS Unicensumar + DevClub</span>
+                </div>
+
+                <div class="hero-stats">
+                    <span><i class="fab fa-html5 icon-html" aria-hidden="true"></i>HTML</span>
+                    <span><i class="fab fa-css3-alt icon-css" aria-hidden="true"></i>CSS</span>
+                    <span><i class="fab fa-js icon-js" aria-hidden="true"></i>JavaScript</span>
+                    <span><i class="fab fa-node-js icon-node" aria-hidden="true"></i>Node.js</span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-
-        <section id="about" class="section-container">
-            <h2>Sobre Mim</h2>
+        <section id="about" class="section-container reveal">
+            <div class="section-heading">
+                <span>Perfil</span>
+                <h2>Sobre Mim</h2>
+            </div>
 
             <p>
-                Olá! Sou Juliana Rainen, graduanda em Análise e Desenvolvimento de Sistemas e estudante de desenvolvimento Full Stack pelo DevClub.
+                Graduada em Análise e Desenvolvimento de Sistemas pela Unicensumar e estudante de desenvolvimento Full Stack pelo DevClub.
             </p>
 
             <p>
@@ -56,27 +85,31 @@
             </p>
         </section>
 
-        <section id="skills" class="section-container">
-            <h2>Habilidades Técnicas</h2>
+        <section id="skills" class="section-container reveal">
+            <div class="section-heading">
+                <h2>Hard skills</h2>
+            </div>
 
             <div class="skills-grid">
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Express</div>
-                <div class="skill-item">MongoDB</div>
-                <div class="skill-item">SQL</div>
-                <div class="skill-item">Git/GitHub</div>
-                <div class="skill-item">IA aplicada</div>
-                <div class="skill-item">Inglês instrumental</div>
+                <div class="skill-item"><i class="fab fa-html5 icon-html"></i>HTML</div>
+                <div class="skill-item"><i class="fab fa-css3-alt icon-css"></i>CSS</div>
+                <div class="skill-item"><i class="fab fa-js icon-js"></i>JavaScript</div>
+                <div class="skill-item"><i class="fab fa-node-js icon-node"></i>Node.js</div>
+                <div class="skill-item"><i class="fas fa-server icon-express"></i>Express</div>
+                <div class="skill-item"><i class="fas fa-database icon-mongo"></i>MongoDB</div>
+                <div class="skill-item"><i class="fas fa-table icon-sql"></i>SQL</div>
+                <div class="skill-item"><i class="fab fa-github icon-github"></i>Git/GitHub</div>
+                <div class="skill-item"><i class="fas fa-robot icon-ai"></i>IA aplicada</div>
+                <div class="skill-item"><i class="fas fa-language icon-language"></i>Inglês instrumental</div>
             </div>
         </section>
 
-        <section id="soft-skills" class="section-container">
-            <h2>Soft Skills</h2>
+        <section id="soft-skills" class="section-container reveal">
+            <div class="section-heading">
+                <h2>Soft Skills</h2>
+            </div>
 
-            <div class="skills-grid">
+            <div class="skills-grid soft-grid">
                 <div class="skill-item">Comunicação</div>
                 <div class="skill-item">Organização</div>
                 <div class="skill-item">Aprendizado contínuo</div>
@@ -88,72 +121,257 @@
             </div>
         </section>
 
-        <section id="projects" class="section-container">
-            <h2>Projetos</h2>
+        <!-- Seção Projetos remodelada como vitrine premium de soluções -->
+        <section id="projects" class="section-container reveal projects-section">
+            <div class="section-heading">
+                <span>Portfólio</span>
+                <h2>Projetos em Destaque</h2>
+                <p class="section-intro">Soluções reais desenvolvidas para web, automação e negócios.</p>
+            </div>
 
-            <div class="projects-grid">
+            <div class="projects-showcase">
+                <article class="solution-card solution-card-main">
+                    <span class="featured-badge">
+                        <i class="fas fa-rocket" aria-hidden="true"></i>
+                        Principal Projeto
+                    </span>
 
+                    <div class="solution-media">
+                        <img src="./img/preview-tradutor-ia.jpeg" alt="Preview do projeto Rainen Transtaler" class="solution-image">
+                    </div>
 
-                <article class="project-card">
-                     <img src="./img/preview-tradutor-ia.png"alt="Preview do projeto Tradutor IA"class="project-image">
-                    <h3>🌎 Tradutor IA</h3>
-                    HTML • CSS • JavaScript • API
-                    <p>
-                        Aplicação web de tradução utilizando integração com API, permitindo traduzir textos de forma simples e intuitiva. Desenvolvida com HTML, CSS e JavaScript durante a Missão Programação com IA do DevClub.
-                    </p>
+                    <div class="solution-content">
+                        <span class="project-label">Aplicação Web</span>
+                        <h3>Rainen Transtaler</h3>
 
-                    <a href="https://tradutoriajulianarainen.netlify.app/" target="_blank">Ver Projeto</a>
+                        <p>
+                            Aplicação web de tradução com suporte a texto, voz, câmera e galeria. Utiliza API de tradução, OCR e JavaScript para oferecer uma experiência prática, moderna e responsiva.
+                        </p>
+
+                        <div class="project-badges project-badges-tech" aria-label="Tecnologias e funcionalidades do Rainen Transtaler">
+                            <span class="badge-html"><i class="fab fa-html5" aria-hidden="true"></i>HTML</span>
+                            <span class="badge-css"><i class="fab fa-css3-alt" aria-hidden="true"></i>CSS</span>
+                            <span class="badge-js"><i class="fab fa-js" aria-hidden="true"></i>JavaScript</span>
+                            <span class="badge-api"><i class="fas fa-plug" aria-hidden="true"></i>API</span>
+                            <span class="badge-ocr"><i class="fas fa-file-image" aria-hidden="true"></i>OCR</span>
+                            <span class="badge-voice"><i class="fas fa-microphone" aria-hidden="true"></i>Voz</span>
+                            <span class="badge-camera"><i class="fas fa-camera" aria-hidden="true"></i>Câmera</span>
+                            <span class="badge-gallery"><i class="fas fa-images" aria-hidden="true"></i>Galeria</span>
+                        </div>
+
+                        <ul class="feature-list" aria-label="Funcionalidades do Rainen Transtaler">
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Tradução por texto</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Tradução por voz</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Tradução por imagem</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>OCR automático</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Upload da galeria</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i>Captura pela câmera</li>
+                        </ul>
+
+                        <div class="project-actions">
+                            <a class="project-link" href="https://tradutoriajulianarainen.netlify.app/" target="_blank" rel="noopener">
+                                Ver projeto
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="project-link project-link-secondary" href="https://github.com/JulianaRainen" target="_blank" rel="noopener">
+                                GitHub
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
                 </article>
 
-                <article class="project-card">
-                    <h3>Landing Page para Negócios Locais</h3>
-                    <p>
-                        Modelo de página profissional voltado para pequenos negócios, com foco em apresentação de serviços, clareza de oferta e conversão de visitantes em contatos pelo WhatsApp.
-                    </p>
+                <article class="solution-card solution-card-reverse">
+                    <div class="solution-media solution-mockup" aria-label="Miniaturas das landing pages para negócios">
+                        <div class="landing-preview-grid">
+                            <figure>
+                                <a href="https://julianarainen.github.io/escritorio-advocacia/" target="_blank" rel="noopener" aria-label="Abrir landing page de advocacia">
+                                    <img src="./img/landing-advocacia.png" alt="Miniatura da landing page de advocacia">
+                                    <figcaption>Advocacia</figcaption>
+                                </a>
+                            </figure>
 
-                    <a href="#" target="_blank">Ver Projeto</a>
+                            <figure>
+                                <a href="https://landing-pagesjrainen.netlify.app/clinica-odontologica/" target="_blank" rel="noopener" aria-label="Abrir landing page de odontologia">
+                                    <img src="./img/landing-odonto.png" alt="Miniatura da landing page de odontologia">
+                                    <figcaption>Odontologia</figcaption>
+                                </a>
+                            </figure>
+
+                            <figure>
+                                <a href="https://landing-pagesjrainen.netlify.app/restaurante/" target="_blank" rel="noopener" aria-label="Abrir landing page de restaurante">
+                                    <img src="./img/landing-restaurante.png" alt="Miniatura da landing page de restaurante">
+                                    <figcaption>Restaurante</figcaption>
+                                </a>
+                            </figure>
+
+                            <figure>
+                                <a href="https://landing-pagesjrainen.netlify.app/energia-solar/" target="_blank" rel="noopener" aria-label="Abrir landing page de energia solar">
+                                    <img src="./img/landing-energia-solar.png" alt="Miniatura da landing page de energia solar">
+                                    <figcaption>Energia Solar</figcaption>
+                                </a>
+                            </figure>
+
+                            <figure>
+                                <a href="https://landing-pagesjrainen.netlify.app/studio-pilates/" target="_blank" rel="noopener" aria-label="Abrir landing page de studio pilates">
+                                    <img src="./img/landing-pilates.png" alt="Miniatura da landing page de studio pilates">
+                                    <figcaption>Pilates</figcaption>
+                                </a>
+                            </figure>
+
+                            <figure>
+                                <a href="https://landing-pagesjrainen.netlify.app/escritorio-tecnologia/" target="_blank" rel="noopener" aria-label="Abrir landing page de escritório de tecnologia">
+                                    <img src="./img/landing-escritorio-tech.png" alt="Miniatura da landing page de escritório de tecnologia">
+                                    <figcaption>Tecnologia</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="solution-content">
+                        <span class="project-label">Sites Comerciais</span>
+                        <h3>Coleção de Landing Pages Comerciais</h3>
+
+                        <p>
+                            Coleção de landing pages responsivas para diferentes nichos comerciais, com foco em apresentação de serviços, contato via WhatsApp, autoridade visual e conversão de visitantes.
+                        </p>
+
+                        <div class="project-badges" aria-label="Nichos das landing pages para negócios">
+                            <span>Advocacia</span>
+                            <span>Odontologia</span>
+                            <span>Restaurante</span>
+                            <span>Energia Solar</span>
+                            <span>Studio Pilates</span>
+                            <span>Tecnologia</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a class="project-link project-link-secondary" href="https://github.com/JulianaRainen" target="_blank" rel="noopener">
+                                GitHub
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
                 </article>
-
             </div>
         </section>
 
+        <!-- Seção comercial conectando projetos aos serviços oferecidos -->
+        <section class="section-container reveal services-section">
+            <div class="section-heading">
+                <span>Soluções</span>
+                <h2>Como posso ajudar seu negócio</h2>
+            </div>
+
+            <div class="stats-grid" aria-label="Números do portfólio">
+                <div>
+                    <strong>8</strong>
+                    <span>projetos publicados</span>
+                </div>
+
+                <div>
+                    <strong>6</strong>
+                    <span>nichos comerciais</span>
+                </div>
+
+                <div>
+                    <strong>3</strong>
+                    <span>áreas de atuação: web, IA e automação</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>projetos responsivos</span>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <article>
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas focadas em apresentar serviços e converter visitantes em contatos.</p>
+                </article>
+
+                <article>
+                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                    <h3>Sites Institucionais</h3>
+                    <p>Presença digital profissional para marcas, profissionais e empresas locais.</p>
+                </article>
+
+                <article>
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <h3>Atendentes IA</h3>
+                    <p>Experiências com inteligência artificial para agilizar atendimento e respostas.</p>
+                </article>
+
+                <article>
+                    <i class="fas fa-gears" aria-hidden="true"></i>
+                    <h3>Automações</h3>
+                    <p>Fluxos digitais para reduzir tarefas repetitivas e organizar processos.</p>
+                </article>
+
+                <article>
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h3>SEO</h3>
+                    <p>Estrutura e conteúdo pensados para melhorar visibilidade e leitura da página.</p>
+                </article>
+
+                <article>
+                    <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+                    <h3>Manutenção</h3>
+                    <p>Ajustes, melhorias e acompanhamento para manter o site sempre atualizado.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-container about-extra reveal">
+            <div>
+                <div class="section-heading left">
+                    <span>Detalhes</span>
+                    <h2>Mais Sobre Mim</h2>
+                </div>
+
+                <p>
+                    Minha trajetória une tecnologia e engenharia. Tenho interesse por estruturas, organização e elementos geométricos como hexágonos, influência da minha passagem pela Engenharia de Materiais. Trago essa visão para o desenvolvimento: criar sistemas peça por peça, buscando soluções bem estruturadas.
+                </p>
+            </div>
+
+            <ul class="social-links" aria-label="Redes sociais">
+                <li>
+                    <a href="https://github.com/JulianaRainen" target="_blank" rel="noopener" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/juliana-rainen-gomes-m%C3%A1ximo-621564176/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/julianagomessz/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://wa.me/message/RVOKAT3BBCFEI1" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </main>
-
-    <aside>
-        <h3>Mais Sobre Mim</h3>
-
-        <p>
-            <strong>Curiosidades:</strong> Minha trajetória une tecnologia e engenharia. Tenho interesse por estruturas, organização e elementos geométricos como hexágonos, influência da minha passagem pela Engenharia de Materiais. Trago essa visão para o desenvolvimento: criar sistemas peça por peça, buscando soluções bem estruturadas.
-        </p>
-
-        <p>
-            <strong>Links Úteis:</strong>
-        </p>
-
-        <ul class="social-links">
-            <li>
-                <a href="https://github.com/JulianaRainen" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="https://www.linkedin.com/in/juliana-rainen-gomes-m%C3%A1ximo-621564176/" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-
-            <li>
-                <a href="https://www.instagram.com/julianagomessz/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-        </ul>
-    </aside>
 
     <footer id="contact">
         <p>
-            Entre em contato:
+            Vamos conversar?
+            <a href="https://wa.me/message/RVOKAT3BBCFEI1" target="_blank" rel="noopener">
+                WhatsApp
+            </a>
+            ou
             <a href="mailto:julianarainengomesmaximo@gmail.com">
                 julianarainengomesmaximo@gmail.com
             </a>
@@ -161,6 +379,5 @@
 
         <p>&copy; 2026 Juliana Rainen Gomes Máximo. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
