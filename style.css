@@ -1018,17 +1018,38 @@ footer a:hover {
         flex-direction: column;
     }
 
+    .navbar ul {
+        gap: 10px;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         min-height: auto;
-        padding-top: 28px;
+        padding: 20px 0 58px;
         text-align: center;
+        gap: 30px;
     }
 
     .hero-text,
     .hero-actions {
         display: grid;
         justify-items: center;
+    }
+
+    .eyebrow {
+        margin-bottom: 10px;
+        padding: 6px 14px;
+        border: 1px solid rgba(255, 211, 56, 0.4);
+        border-radius: 999px;
+        background: rgba(255, 211, 56, 0.12);
+    }
+
+    .hero h1 {
+        font-size: clamp(2.3rem, 8vw, 3.5rem);
+    }
+
+    .hero-actions {
+        margin-top: 24px;
     }
 
     .about-extra {
@@ -1080,18 +1101,24 @@ footer a:hover {
 
     .navbar {
         width: min(100% - 20px, 1120px);
+        padding: 18px 0;
+        gap: 12px;
     }
 
     .navbar ul {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .navbar a:not(.brand) {
         justify-content: center;
         padding: 8px 10px;
         font-size: 0.9rem;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        transition: background-color 0.25s ease, transform 0.25s ease;
     }
 
     .hero-content,
@@ -1100,12 +1127,30 @@ footer a:hover {
         width: min(100% - 20px, 1120px);
     }
 
+    .hero-content {
+        padding: 18px 0 56px;
+        gap: 24px;
+    }
+
     .hero h1 {
-        font-size: 2.55rem;
+        font-size: 2.2rem;
+        margin: 14px 0 0;
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 0.98rem;
+    }
+
+    .hero-actions {
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .eyebrow {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(255, 211, 56, 0.12);
     }
 
     .hero-actions,
