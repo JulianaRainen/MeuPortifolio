@@ -27,22 +27,22 @@
         '#about > p',
         '#skills .skill-group',
         '#soft-skills .skills-grid',
-        '#projects .projects-showcase',
-        '.services-section .services-grid',
-        '.about-extra > p',
-        '.about-extra > ul'
+        '#projects .solution-card',
+        '.services-section .services-grid article',
+        '.about-extra p',
+        '.about-extra .social-links'
     ].join(', '));
 
     const countBySection = new Map();
     targets.forEach((target) => {
         const section = target.closest('section');
         const count = countBySection.get(section) || 0;
-        target.style.setProperty('--reveal-delay', `${Math.min(count * 65, 195)}ms`);
+        target.style.setProperty('--reveal-delay', `${Math.min(count * 90, 450)}ms`);
         countBySection.set(section, count + 1);
         target.classList.add('reveal-target');
 
         const bounds = target.getBoundingClientRect();
-        if (bounds.top < window.innerHeight * 0.9 && bounds.bottom > 0) {
+        if (bounds.bottom <= 0) {
             target.classList.add('is-visible');
         }
     });
@@ -56,7 +56,7 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { rootMargin: '0px 0px -32px 0px', threshold: 0.05 });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
 
     targets.forEach((target) => {
         if (!target.classList.contains('is-visible')) {
