@@ -28,7 +28,6 @@
         '#skills .skill-group',
         '#soft-skills .skills-grid',
         '#projects .projects-showcase',
-        '.services-section .stats-grid',
         '.services-section .services-grid',
         '.about-extra > p',
         '.about-extra > ul'

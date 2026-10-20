@@ -345,54 +345,6 @@ main {
     margin-bottom: 0;
 }
 
-.services-section .stats-grid {
-    margin-bottom: 18px;
-    padding: 14px;
-    background:
-        linear-gradient(135deg, rgba(7, 11, 18, 0.94), rgba(0, 59, 143, 0.9)),
-        url('img/background-hexagon-tech-dark.png') center / cover;
-    border: 1px solid rgba(255, 211, 56, 0.25);
-    border-radius: var(--radius);
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
-}
-
-.stats-grid div {
-    min-height: 118px;
-    display: grid;
-    align-content: center;
-    gap: 4px;
-    padding: 18px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: var(--radius);
-    backdrop-filter: blur(10px);
-    transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
-}
-
-.stats-grid div:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 211, 56, 0.5);
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.stats-grid strong {
-    color: var(--yellow);
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1;
-}
-
-.stats-grid span {
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 0.92rem;
-    font-weight: 800;
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -1172,10 +1124,6 @@ footer a:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .section-heading.left {
         justify-items: center;
         text-align: center;
@@ -1320,7 +1268,6 @@ footer a:hover {
     }
 
     .feature-list,
-    .stats-grid,
     .services-grid {
         grid-template-columns: 1fr;
     }
