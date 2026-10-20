@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="hero">
         <nav class="navbar" aria-label="Navegação principal">
             <a class="brand" href="#top">JR</a>
@@ -66,7 +68,7 @@
     </header>
 
     <main>
-        <section id="about" class="section-container reveal">
+        <section id="about" class="section-container">
             <div class="section-heading">
                 <span>Perfil</span>
                 <h2>Sobre Mim</h2>
@@ -85,26 +87,57 @@
             </p>
         </section>
 
-        <section id="skills" class="section-container reveal">
+        <section id="skills" class="section-container skills-section">
             <div class="section-heading">
-                <h2>Hard skills</h2>
+                <span>Ferramentas e prática</span>
+                <h2>Tecnologias que uso</h2>
+                <p class="section-intro">Da interface aos dados, estas são as ferramentas presentes na minha jornada de desenvolvimento.</p>
             </div>
 
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fab fa-html5 icon-html"></i>HTML</div>
-                <div class="skill-item"><i class="fab fa-css3-alt icon-css"></i>CSS</div>
-                <div class="skill-item"><i class="fab fa-js icon-js"></i>JavaScript</div>
-                <div class="skill-item"><i class="fab fa-node-js icon-node"></i>Node.js</div>
-                <div class="skill-item"><i class="fas fa-server icon-express"></i>Express</div>
-                <div class="skill-item"><i class="fas fa-database icon-mongo"></i>MongoDB</div>
-                <div class="skill-item"><i class="fas fa-table icon-sql"></i>SQL</div>
-                <div class="skill-item"><i class="fab fa-github icon-github"></i>Git/GitHub</div>
-                <div class="skill-item"><i class="fas fa-robot icon-ai"></i>IA aplicada</div>
-                <div class="skill-item"><i class="fas fa-language icon-language"></i>Inglês instrumental</div>
+            <div class="skill-groups">
+                <article class="skill-group skill-group-featured">
+                    <div class="skill-group-heading">
+                        <span class="skill-group-number">01 / Interface</span>
+                        <h3>Experiências web</h3>
+                        <p>Estrutura, estilo e interatividade para páginas claras e responsivas.</p>
+                    </div>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-html5 icon-html" aria-hidden="true"></i>HTML</li>
+                        <li><i class="fab fa-css3-alt icon-css" aria-hidden="true"></i>CSS</li>
+                        <li><i class="fab fa-js icon-js" aria-hidden="true"></i>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-heading">
+                        <span class="skill-group-number">02 / Desenvolvimento</span>
+                        <h3>Aplicações e dados</h3>
+                        <p>Ferramentas para lógica de servidor e organização de informações.</p>
+                    </div>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-node-js icon-node" aria-hidden="true"></i>Node.js</li>
+                        <li><i class="fas fa-server icon-express" aria-hidden="true"></i>Express</li>
+                        <li><i class="fas fa-database icon-mongo" aria-hidden="true"></i>MongoDB</li>
+                        <li><i class="fas fa-table icon-sql" aria-hidden="true"></i>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-heading">
+                        <span class="skill-group-number">03 / Fluxo de trabalho</span>
+                        <h3>Conexões e entrega</h3>
+                        <p>Versionamento, recursos de IA e leitura técnica no dia a dia.</p>
+                    </div>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-github icon-github" aria-hidden="true"></i>Git/GitHub</li>
+                        <li><i class="fas fa-robot icon-ai" aria-hidden="true"></i>IA aplicada</li>
+                        <li><i class="fas fa-language icon-language" aria-hidden="true"></i>Inglês instrumental</li>
+                    </ul>
+                </article>
             </div>
         </section>
 
-        <section id="soft-skills" class="section-container reveal">
+        <section id="soft-skills" class="section-container">
             <div class="section-heading">
                 <h2>Soft Skills</h2>
             </div>
@@ -122,7 +155,7 @@
         </section>
 
         <!-- Seção Projetos remodelada como vitrine premium de soluções -->
-        <section id="projects" class="section-container reveal projects-section">
+        <section id="projects" class="section-container projects-section">
             <div class="section-heading">
                 <span>Portfólio</span>
                 <h2>Projetos em Destaque</h2>
@@ -258,7 +291,7 @@
         </section>
 
         <!-- Seção comercial conectando projetos aos serviços oferecidos -->
-        <section class="section-container reveal services-section">
+        <section class="section-container services-section">
             <div class="section-heading">
                 <span>Soluções</span>
                 <h2>Como posso ajudar seu negócio</h2>
@@ -325,7 +358,7 @@
             </div>
         </section>
 
-        <section class="section-container about-extra reveal">
+        <section class="section-container about-extra">
             <div>
                 <div class="section-heading left">
                     <span>Detalhes</span>
