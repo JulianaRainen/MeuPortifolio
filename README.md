@@ -1,6 +1,6 @@
 # Portfólio | Juliana Rainen
 
-Portfólio pessoal de Juliana Rainen, desenvolvedora em formação com foco em desenvolvimento web, automações e aplicações com inteligência artificial.
+Portfólio pessoal de Juliana Rainen, desenvolvedora web com foco em automações e aplicações com inteligência artificial.
 
 ## Sobre
 
