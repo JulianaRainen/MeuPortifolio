@@ -9,14 +9,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="preview-premium.css?v=4">
+    <link rel="stylesheet" href="carousel-preview.css?v=4">
     <script src="script.js" defer></script>
+    <script src="carousel-preview.js?v=4" defer></script>
 </head>
 
-<body>
+<body class="premium-preview carousel-preview production" data-default-variant="commercial">
+    <div class="intro-splash" aria-label="Abertura do portfólio">
+        <div class="intro-splash-inner">
+            <div class="intro-logo-frame">
+                <img src="img/logo-jr-transparente.png" alt="Logo JR de Juliana Rainen" class="intro-logo">
+            </div>
+            <div class="intro-name" aria-label="Juliana Rainen">
+                <span class="intro-name-text"></span><span class="intro-cursor" aria-hidden="true">|</span>
+            </div>
+        </div>
+    </div>
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="hero">
         <nav class="navbar" aria-label="Navegação principal">
-            <a class="brand" href="#top">JR</a>
+            <a class="brand" href="#top" aria-label="Juliana Rainen">
+                <img src="img/logo-jr-transparente.png" alt="Logo JR" class="brand-logo">
+            </a>
 
             <ul>
                 <li><a href="#about">Sobre</a></li>
@@ -30,7 +45,7 @@
             <div class="hero-text">
                 <span class="eyebrow">Desenvolvimento web • Automação • IA aplicada</span>
 
-                <h1>Juliana Rainen Gomes Máximo</h1>
+                <h1 class="hero-name">Juliana Rainen</h1>
 
                 <p class="tagline">
                     Desenvolvedora em formação, com visão analítica e foco em construir experiências digitais claras, modernas e úteis para pessoas e negócios.
@@ -65,6 +80,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="hero-logo-texture" aria-hidden="true"></div>
     </header>
 
     <main>
@@ -94,46 +111,56 @@
                 <p class="section-intro">Da interface aos dados, estas são as ferramentas presentes na minha jornada de desenvolvimento.</p>
             </div>
 
-            <div class="skill-groups">
-                <article class="skill-group skill-group-featured">
-                    <div class="skill-group-heading">
-                        <span class="skill-group-number">01 / Interface</span>
-                        <h3>Experiências web</h3>
-                        <p>Estrutura, estilo e interatividade para páginas claras e responsivas.</p>
+            <div class="skills-marquee" aria-label="Tecnologias da Juliana">
+                <div class="skills-marquee-row">
+                    <span class="skills-marquee-label">Interface</span>
+                    <div class="skills-marquee-viewport">
+                        <ul class="skills-marquee-track skills-marquee-forward">
+                            <li class="skill-marquee-item"><i class="fab fa-html5 icon-html" aria-hidden="true"></i><span>HTML</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-css3-alt icon-css" aria-hidden="true"></i><span>CSS</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-wind icon-tailwind" aria-hidden="true"></i><span>Tailwind CSS</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-js icon-js" aria-hidden="true"></i><span>JavaScript</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-react icon-react" aria-hidden="true"></i><span>React</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-code icon-typescript" aria-hidden="true"></i><span>TypeScript</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fab fa-html5 icon-html"></i><span>HTML</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fab fa-css3-alt icon-css"></i><span>CSS</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fas fa-wind icon-tailwind"></i><span>Tailwind CSS</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fab fa-js icon-js"></i><span>JavaScript</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fab fa-react icon-react"></i><span>React</span></li>
+                            <li class="skill-marquee-item" aria-hidden="true"><i class="fas fa-code icon-typescript"></i><span>TypeScript</span></li>
+                        </ul>
                     </div>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-html5 icon-html" aria-hidden="true"></i>HTML</li>
-                        <li><i class="fab fa-css3-alt icon-css" aria-hidden="true"></i>CSS</li>
-                        <li><i class="fab fa-js icon-js" aria-hidden="true"></i>JavaScript</li>
-                    </ul>
-                </article>
+                </div>
 
-                <article class="skill-group">
-                    <div class="skill-group-heading">
-                        <span class="skill-group-number">02 / Desenvolvimento</span>
-                        <h3>Aplicações e dados</h3>
-                        <p>Ferramentas para lógica de servidor e organização de informações.</p>
+                <div class="skills-marquee-row">
+                    <span class="skills-marquee-label">Desenvolvimento e fluxo</span>
+                    <div class="skills-marquee-viewport">
+                        <ul class="skills-marquee-track skills-marquee-reverse">
+                            <li class="skill-marquee-item"><i class="fab fa-node-js icon-node" aria-hidden="true"></i><span>Node.js</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-code icon-next" aria-hidden="true"></i><span>Next.js</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-server icon-express" aria-hidden="true"></i><span>Express</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-database icon-mongo" aria-hidden="true"></i><span>MongoDB</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-table icon-sql" aria-hidden="true"></i><span>SQL</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-github icon-github" aria-hidden="true"></i><span>Git/GitHub</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-docker icon-docker" aria-hidden="true"></i><span>Docker</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-python icon-python" aria-hidden="true"></i><span>Python</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-paper-plane icon-postman" aria-hidden="true"></i><span>Postman</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-robot icon-ai" aria-hidden="true"></i><span>IA aplicada</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-language icon-language" aria-hidden="true"></i><span>Inglês</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-node-js icon-node" aria-hidden="true"></i><span>Node.js</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-code icon-next" aria-hidden="true"></i><span>Next.js</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-server icon-express" aria-hidden="true"></i><span>Express</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-database icon-mongo" aria-hidden="true"></i><span>MongoDB</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-table icon-sql" aria-hidden="true"></i><span>SQL</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-github icon-github" aria-hidden="true"></i><span>Git/GitHub</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-docker icon-docker" aria-hidden="true"></i><span>Docker</span></li>
+                            <li class="skill-marquee-item"><i class="fab fa-python icon-python" aria-hidden="true"></i><span>Python</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-paper-plane icon-postman" aria-hidden="true"></i><span>Postman</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-robot icon-ai" aria-hidden="true"></i><span>IA aplicada</span></li>
+                            <li class="skill-marquee-item"><i class="fas fa-language icon-language" aria-hidden="true"></i><span>Inglês</span></li>
+                        </ul>
                     </div>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-node-js icon-node" aria-hidden="true"></i>Node.js</li>
-                        <li><i class="fas fa-server icon-express" aria-hidden="true"></i>Express</li>
-                        <li><i class="fas fa-database icon-mongo" aria-hidden="true"></i>MongoDB</li>
-                        <li><i class="fas fa-table icon-sql" aria-hidden="true"></i>SQL</li>
-                    </ul>
-                </article>
-
-                <article class="skill-group">
-                    <div class="skill-group-heading">
-                        <span class="skill-group-number">03 / Fluxo de trabalho</span>
-                        <h3>Conexões e entrega</h3>
-                        <p>Versionamento, recursos de IA e leitura técnica no dia a dia.</p>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-github icon-github" aria-hidden="true"></i>Git/GitHub</li>
-                        <li><i class="fas fa-robot icon-ai" aria-hidden="true"></i>IA aplicada</li>
-                        <li><i class="fas fa-language icon-language" aria-hidden="true"></i>Inglês instrumental</li>
-                    </ul>
-                </article>
+                </div>
             </div>
         </section>
 

@@ -1,0 +1,485 @@
+/* Prévia experimental: carrossel de projetos com três direções visuais. */
+
+.production .carousel-variants {
+    display: none;
+}
+
+.carousel-preview .intro-splash {
+    position: fixed;
+    z-index: 30;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    background: #070b12;
+    animation: intro-splash 4.8s ease forwards;
+    pointer-events: none;
+}
+
+.carousel-preview .intro-replay {
+    position: fixed;
+    z-index: 31;
+    right: 18px;
+    bottom: 18px;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 211, 56, 0.48);
+    border-radius: 10px;
+    color: var(--black);
+    background: var(--yellow);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 800;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-preview .intro-replay:hover,
+.carousel-preview .intro-replay:focus-visible {
+    transform: translateY(-2px);
+}
+
+.carousel-preview .intro-splash-inner {
+    display: grid;
+    justify-items: center;
+    gap: 18px;
+    text-align: center;
+}
+
+.carousel-preview .intro-logo-frame {
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.carousel-preview .intro-logo {
+    width: 90%;
+    height: 90%;
+    display: block;
+    object-fit: contain;
+}
+
+.carousel-preview .intro-name {
+    min-height: 1.4em;
+    color: var(--yellow);
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.carousel-preview .intro-cursor {
+    margin-left: 0.08em;
+    animation: typing-caret 0.85s steps(1, end) infinite;
+}
+
+@keyframes intro-splash {
+    0%, 72% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Prévia experimental: este bloco transforma Skills em duas faixas contínuas. */
+.carousel-preview .typing-name {
+    display: inline-block;
+    min-height: 1.04em;
+}
+
+.carousel-preview .hero-logo-texture {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    bottom: -190px;
+    width: min(46vw, 540px);
+    aspect-ratio: 1;
+    background: url('img/logo-jr-transparente.png') center / contain no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    filter: saturate(0.72);
+    mix-blend-mode: screen;
+    transform: translateX(-50%) scale(0.82);
+    animation: hero-logo-texture 4.5s ease-out forwards;
+}
+
+.carousel-preview .typing-name-text {
+    display: inline;
+}
+
+.carousel-preview .typing-cursor {
+    display: inline-block;
+    margin-left: 0.08em;
+    color: var(--yellow);
+    font-weight: 500;
+    animation: typing-caret 0.85s steps(1, end) infinite;
+}
+
+@keyframes typing-caret {
+    0%, 48% { border-color: var(--yellow); }
+    49%, 100% { border-color: transparent; }
+}
+
+@keyframes hero-logo-texture {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(24px) scale(0.82);
+    }
+
+    55%, 100% {
+        opacity: 0.1;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-preview .intro-splash {
+        animation: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .carousel-preview .typing-name {
+        animation: none;
+    }
+
+    .carousel-preview .typing-cursor {
+        animation: none;
+    }
+
+    .carousel-preview .hero-logo-texture {
+        opacity: 0.1;
+        animation: none;
+        transform: translateX(-50%);
+    }
+}
+
+.carousel-preview .skills-marquee {
+    display: grid;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.carousel-preview .skills-marquee-row {
+    display: grid;
+    gap: 10px;
+}
+
+.carousel-preview .skills-marquee-label {
+    color: var(--blue-dark);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.carousel-preview .skills-marquee-viewport {
+    position: relative;
+    overflow: hidden;
+    padding: 4px 0 10px;
+    mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+
+.carousel-preview .skills-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    will-change: transform;
+}
+
+.carousel-preview .skills-marquee-forward {
+    animation: skills-marquee-forward 26s linear infinite;
+}
+
+.carousel-preview .skills-marquee-reverse {
+    animation: skills-marquee-reverse 34s linear infinite;
+}
+
+.carousel-preview .skills-marquee-viewport:hover .skills-marquee-track,
+.carousel-preview .skills-marquee-viewport:focus-within .skills-marquee-track {
+    animation-play-state: paused;
+}
+
+.carousel-preview .skill-marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 132px;
+    min-height: 66px;
+    padding: 12px 16px;
+    color: var(--gray-900);
+    background: linear-gradient(145deg, #ffffff, #edf3fa);
+    border: 1px solid rgba(8, 119, 255, 0.14);
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(7, 17, 31, 0.09);
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+.carousel-preview .skill-marquee-item i {
+    font-size: 1.35rem;
+}
+
+.carousel-preview .skill-marquee-item .icon-html { color: #e34f26; }
+.carousel-preview .skill-marquee-item .icon-css { color: #1572b6; }
+.carousel-preview .skill-marquee-item .icon-js { color: #d5b900; }
+.carousel-preview .skill-marquee-item .icon-node { color: #339933; }
+.carousel-preview .skill-marquee-item .icon-express { color: #111827; }
+.carousel-preview .skill-marquee-item .icon-mongo { color: #47a248; }
+.carousel-preview .skill-marquee-item .icon-sql { color: #2563eb; }
+.carousel-preview .skill-marquee-item .icon-github { color: #181717; }
+.carousel-preview .skill-marquee-item .icon-ai { color: #7c3aed; }
+.carousel-preview .skill-marquee-item .icon-language { color: #0ea5e9; }
+.carousel-preview .skill-marquee-item .icon-react { color: #149eca; }
+.carousel-preview .skill-marquee-item .icon-typescript { color: #3178c6; }
+.carousel-preview .skill-marquee-item .icon-docker { color: #2496ed; }
+.carousel-preview .skill-marquee-item .icon-python { color: #3776ab; }
+.carousel-preview .skill-marquee-item .icon-postman { color: #ff6c37; }
+.carousel-preview .skill-marquee-item .icon-next { color: #111827; }
+.carousel-preview .skill-marquee-item .icon-tailwind { color: #06b6d4; }
+
+@keyframes skills-marquee-forward {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes skills-marquee-reverse {
+    from { transform: translate3d(-50%, 0, 0); }
+    to { transform: translate3d(0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-preview .skills-marquee-viewport {
+        overflow: visible;
+        mask-image: none;
+    }
+
+    .carousel-preview .skills-marquee-track {
+        width: 100%;
+        flex-wrap: wrap;
+        animation: none;
+    }
+
+    .carousel-preview .skills-marquee-track .skill-marquee-item:nth-child(n + 8) {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .carousel-preview .intro-replay {
+        right: 12px;
+        bottom: 76px;
+    }
+
+    .carousel-preview .intro-logo-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .carousel-preview .hero-logo-texture {
+        bottom: -80px;
+        width: 82vw;
+    }
+
+    .carousel-preview .skills-marquee {
+        gap: 22px;
+        margin-top: 22px;
+    }
+
+    .carousel-preview .skills-marquee-label {
+        font-size: 0.7rem;
+    }
+
+    .carousel-preview .skill-marquee-item {
+        min-width: 116px;
+        min-height: 58px;
+        padding: 10px 12px;
+        border-radius: 11px;
+        font-size: 0.86rem;
+    }
+
+    .carousel-preview .skill-marquee-item i {
+        font-size: 1.15rem;
+    }
+}
+
+.carousel-preview .projects-showcase {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 16px;
+    padding: 6px 4px 22px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) transparent;
+}
+
+.carousel-preview .solution-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+.carousel-preview .solution-image {
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+    background: #061b3b;
+}
+
+.carousel-preview .carousel-control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 0 4px 12px;
+}
+
+.carousel-preview .carousel-buttons,
+.carousel-preview .carousel-dots,
+.carousel-preview .carousel-variants {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carousel-preview .carousel-buttons button,
+.carousel-preview .carousel-variants button {
+    border: 1px solid var(--gray-200);
+    color: var(--gray-900);
+    background: var(--white);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 800;
+}
+
+.carousel-preview .carousel-buttons button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.carousel-preview .carousel-variants {
+    position: fixed;
+    z-index: 20;
+    right: 18px;
+    bottom: 18px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    background: rgba(7, 17, 31, 0.92);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(14px);
+}
+
+.carousel-preview .carousel-variants::before {
+    content: 'Prévia';
+    margin: 0 4px 0 6px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.carousel-preview .carousel-variants button {
+    min-height: 34px;
+    padding: 6px 10px;
+    border-color: transparent;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.78);
+    background: transparent;
+    font-size: 0.76rem;
+}
+
+.carousel-preview .carousel-variants button.is-active,
+.carousel-preview .carousel-variants button:hover,
+.carousel-preview .carousel-variants button:focus-visible {
+    color: var(--black);
+    background: var(--yellow);
+}
+
+.carousel-preview .carousel-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--gray-200);
+}
+
+.carousel-preview .carousel-dot.is-active {
+    width: 24px;
+    border-radius: 999px;
+    background: var(--blue);
+}
+
+/* Variante 2: profundidade lateral para comparar a composição. */
+.carousel-preview.variant-coverflow .projects-showcase {
+    gap: 16px;
+    perspective: 1100px;
+}
+
+.carousel-preview.variant-coverflow .solution-card {
+    flex-basis: min(78%, 760px);
+    transform: scale(0.96);
+    opacity: 0.72;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.carousel-preview.variant-coverflow .solution-card.is-current {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Variante 3: leitura de case study empilhada e mais comercial. */
+.carousel-preview.variant-commercial .solution-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+}
+
+.carousel-preview.variant-commercial .solution-media {
+    order: 0;
+    min-height: 360px;
+}
+
+.carousel-preview.variant-commercial .solution-content {
+    justify-content: center;
+    padding: clamp(30px, 5vw, 64px);
+    background: linear-gradient(180deg, #ffffff, #f3f7fc);
+}
+
+.carousel-preview.variant-commercial .solution-content h3 {
+    max-width: 12ch;
+    font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+@media (max-width: 860px) {
+    .carousel-preview.variant-commercial .solution-media {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 560px) {
+    .carousel-preview .carousel-control-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .carousel-preview .carousel-variants {
+        position: static;
+        justify-content: center;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .carousel-preview .carousel-variants::before {
+        display: none;
+    }
+
+    .carousel-preview.variant-coverflow .solution-card {
+        flex-basis: 88%;
+    }
+}
