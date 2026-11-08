@@ -187,6 +187,20 @@ body.premium-preview::before {
 
 @media (max-width: 860px) {
     .premium-preview .hero-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 44px 0 58px;
+        gap: 30px;
+    }
+
+    .premium-preview .hero-text,
+    .premium-preview .hero-card {
+        width: 100%;
+        max-width: 560px;
+        margin-inline: auto;
+    }
+
+    .premium-preview .hero-content {
         padding-top: 44px;
     }
 }
@@ -215,6 +229,11 @@ body.premium-preview::before {
     .premium-preview .hero-content {
         gap: 32px;
         padding: 34px 0 54px;
+    }
+
+    .premium-preview .hero-card {
+        max-width: 360px;
+        padding: 22px 14px;
     }
 
     .premium-preview .eyebrow {
