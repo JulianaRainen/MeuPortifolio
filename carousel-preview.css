@@ -1,7 +1,7 @@
 /* Prévia experimental: carrossel de projetos com três direções visuais. */
 
 .production .carousel-variants {
-    display: none;
+    display: none !important;
 }
 
 .carousel-preview .intro-splash {
